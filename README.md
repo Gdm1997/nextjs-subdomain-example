@@ -15,7 +15,7 @@ this is an example of how to use subdomains with nextjs app router
 ## Installation
 
 ```bash
-git clone
+git clone https://github.com/Gdm1997/nextjs-subdomain-example.git
 
 cd subdomain-example && npm install && npm run dev
 ```
