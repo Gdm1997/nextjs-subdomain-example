@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const FormView = ({ subdomain }: { subdomain: string }) => {
+const FormView = ({ params }: { params: { subdomain: string } }) => {
   return (
     <div>
-      Domain : {subdomain}
+      Domain : {params.subdomain}
       <Link
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         href="/"
@@ -22,17 +22,5 @@ const FormView = ({ subdomain }: { subdomain: string }) => {
     </div>
   );
 };
-
-export function getServerSideProps({
-  params,
-}: {
-  params: { subdomain: string };
-}) {
-  return {
-    props: {
-      subdomain: params.subdomain,
-    },
-  };
-}
 
 export default FormView;
